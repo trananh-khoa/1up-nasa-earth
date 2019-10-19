@@ -12,7 +12,7 @@ const FAILURE_MESSAGE = 'Incorrect!'
 const GAME_SUCCESS_MESSAGE = 'Congratulations!'
 const GAME_FAILURE_MESSAGE = 'Better luck next time!'
 
-let gameRounds = 0          // Tracker for how mahy games have been played
+let gameRounds = 0          // Tracker for how many games have been played
 let successfullRounds = 0   // Tracker for how many games have been completed
 let failedRounds = 0        // Tracker for how many games have been failed
 
