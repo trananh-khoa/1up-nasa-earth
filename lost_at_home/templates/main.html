@@ -1,7 +1,17 @@
 {% extends "layout.html" %}
 
+{% block head %}
+<link rel="stylesheet" type="text/css" href={{ url_for('static', filename='css/main.css') }}>
+{% endblock head %}
+
 {% block content %}
-<h1>HELLO WORLD!</h1>
+<div class="align-items-center container-fluid d-flex flex-column justify-content-center " id="lah-menu">
+    <div id="lah-menu-content">
+        <h1 class="display-1" id="lah-menu-title">LOST AT HOME</h1>
+        <br>
+        <button type="button" class="btn btn-block btn-primary" id="lah-menu-start-button">START</button>
+    </div>
+</div>
 {% endblock content %}
 
 {% block scripts %}
