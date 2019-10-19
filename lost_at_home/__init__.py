@@ -5,7 +5,7 @@ def create_app():
     app = Flask(__name__)
 
     # Register blueprints
-    from three_and_a_half_men.main.routes import main
+    from lost_at_home.main.routes import main
     app.register_blueprint(main)
 
     return app

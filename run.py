@@ -1,4 +1,4 @@
-from three_and_a_half_men import create_app
+from lost_at_home import create_app
 
 app = create_app()
 
