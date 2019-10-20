@@ -5,14 +5,18 @@
 {% endblock head %}
 
 {% block content %}
-<div class="align-items-center container-fluid d-flex flex-column justify-content-center " id="lah-container">
-  <!-- Title -->
-  <h1 class="display-1" id="lah-title">LOST AT HOME</h1>
+<div id="lah-container">
+
+<div class="text-center">
+  <h1 class="display-2" id="lah-title">LOST AT HOME</h1>
+</div>
+
+<div class="align-items-center container-fluid d-flex flex-column justify-content-center">
 
   <div class="container-fluid">
     <div class="align-items-center d-flex" id="lah-minigame-bar">
       <div id="lah-minigame-lives">
-        <span>LIVES: 
+        <span>LIVES:
           <i class="fas fa-heart"></i>
           <i class="far fa-heart"></i>
           <i class="far fa-heart"></i>
@@ -21,7 +25,7 @@
       <button type="button" class="btn btn-outline-dark" id="lah-menu-reset-button">
         <i class="fas fa-sync-alt"></i>
       </button>
-      <!-- progress bar -->
+      <div class="progress-bar bg-info" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" id="lah-progress"><span id="lah-progress-value"></span>%</div>
     </div>
   </div>
 
@@ -32,16 +36,68 @@
         <h5 class="card-title" id="lah-minigame-question">QUESTION #
           <span id="lah-minigame-round"></span>: <span id="lah-minigame-question-text"></span>
         </h5>
-        <!-- four choices buttons -->
 
-        <div id="lah-minigame-controls">
-          <button type="button" class="btn btn-block btn-primary" id="lah-menu-start-button">START</button>
+        <div class="align-items-center d-flex flex-row" id="lah-minigame-options">
+          <div class="col">
+            <button type="button" class="btn btn-block btn-success m-2" id="lah-options">OPTION A: <span id="lah-optionA"></span></button>
+            <button type="button" class="btn btn-block btn-success m-2" id="lah-options">OPTION B: <span id="lah-optionB"></span></button>
+          </div>
+          <div class="col">
+            <button type="button" class="btn btn-block btn-success m-2" id="lah-options">OPTION C: <span id="lah-optionC"></span></button>
+            <button type="button" class="btn btn-block btn-success m-2" id="lah-options">OPTION D: <span id="lah-optionD"></span></button>
+          </div>
         </div>
+
+        <hr/>
+
+        <div class="align-items-center d-flex flex-row" id="lah-minigame-controls">
+          <div class="col">
+            <button type="button" class="btn btn-block btn-primary m-2" id="lah-menu-start-button">START GAME</button>
+          </div>
+          <div class="col">
+            <button type="button" class="btn btn-block btn-primary" data-toggle="modal" data-target="#simpleModal" id="lah-menu-intructions-button">INSTRUCTIONS</button>
+          </div>    ​
+          <div id="simpleModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h2 class="modal-title text-dark">Instructions</h2>
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body text-dark">
+                  <p>You are the last one to survive a deadly bilogical virus that
+                    broke out throughout the space station. You just escape in a
+                    cryodenic pod and are launched to the surface of the Earth,
+                    heading for a crash landing.</p>
+                  <p>After an unknown amount of time,
+                    you wake up and try to find a way to connect with the rest of
+                    humanity. You can recollect some of the memories that you had
+                    on the Space Station but they are fuzzy. Your team was in charge
+                    of taking satellite images of Earth and learning about temperatures
+                    rises due to global warming for the past 10 years, however the Earth
+                    seems different than what you remember.</p>
+                  <p>Upon rummaging through the
+                    remains of your crash site you find a tablet and start to dicepher the
+                    data, in hopes to retrigger your memories and help you find your way
+                    back to civilization</p>
+                  <p>You will be playing a game trivia to reboot your memory!</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
       </div>
     </div>
   </div>
 
-  
+
+</div>
+
 </div>
 {% endblock content %}
 
