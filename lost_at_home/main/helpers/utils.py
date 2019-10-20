@@ -64,9 +64,15 @@ def convert_csv_to_dataframe(filename, filters=None, sortBy=None):
 def generate_minigame_choices(filename, exclude):
     answer = CSV_FILENAME_MAP[filename]
     choices = [CSV_FILENAME_MAP[x] for x in os.listdir(DATASETS_PATH) if x not in exclude]
+<<<<<<< HEAD
     choices = random.sample(choices, k = 3)
     choices = choices.append(answer)
     return choices
+=======
+    choices2 = random.sample(choices, k = 3)
+    choices2.append(answer)
+    return choices2
+>>>>>>> cb86f0d5972a4dedb32db15eff3303899ad50a2e
 
 def generate_plot_figure(dataframes, filename):
     """
