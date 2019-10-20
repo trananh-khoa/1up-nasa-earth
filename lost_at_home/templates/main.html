@@ -1,19 +1,147 @@
 {% extends "layout.html" %}
-
+​
 {% block head %}
 <link rel="stylesheet" type="text/css" href={{ url_for('static', filename='css/main.css') }}>
+<!-- <style type="text/css">
+  #lah-menu {
+      background-color: mediumturquoise;
+      height: 100vh;
+      margin: 0;
+      padding: 0;
+      width: 100vw;
+  }
+​
+  #lah-menu-panel {
+    margin: 1em;
+  }
+​
+  div>table {
+   border: solid 3px black;
+   width: 600px;
+   height: auto;
+   padding: 0.5em;
+  }
+​
+  tr {
+    text-align: center;
+    padding: 0.5em;
+  }
+​
+  canvas {
+    border:3px solid black;
+  }
+​
+  #lah-menu-lives>p {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+​
+  th>p {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+​
+  td {
+    padding: 0.5em;
+  }
+​
+  #lah-menu-buttons {
+    margin : 1em;
+  }
+</style> -->
 {% endblock head %}
-
+​
 {% block content %}
+​
 <div class="align-items-center container-fluid d-flex flex-column justify-content-center " id="lah-menu">
-    <div id="lah-menu-content">
-        <h1 class="display-1" id="lah-menu-title">LOST AT HOME</h1>
-        <br>
-        <button type="button" class="btn btn-block btn-primary" id="lah-menu-start-button">START</button>
+​
+  <div id="lah-menu-title">
+    <h1 class="display-1">LOST AT HOME</h1>
+  </div>
+​
+  <div id="lah-menu-content">
+    <div class="align-items-center d-flex flex-row justify-content-center" id="lah-menu-panel">
+      <div class="col text-right" id="lah-menu-lives">
+        <p>Lives
+        <i class="fas fa-heart"></i>
+        <i class="far fa-heart"></i>
+        <i class="far fa-heart"></i>
+        </p>
+      </div>
+      <div class="col " id="lah-menu-reset">
+        <button type="button" class="btn btn-outline-dark" id="lah-menu-reset-button"><i class="fas fa-sync-alt"></i></button>
+      </div>
     </div>
+​
+    <div class="align-items-center d-flex flex-row" id="lah-menu-game">
+      <table>
+        <tr>
+          <th colspan="2">
+            <h1 id="round">Question 1/3</h1>
+            <p>Where is the location on line 1?</p>
+          </th>
+        </tr>
+        <tr>
+          <th colspan="2"><div id="image-area">
+            <canvas id="canvas" width="300" height="200"></canvas>
+          </div></th>
+        </tr>
+        <tr>
+          <td><button type="button" class="btn btn-block btn-primary" id="lah-menu-game-a1">Saudi Arabia</button></td>
+          <td><button type="button" class="btn btn-block btn-primary" id="lah-menu-game-a2">Eygpt</button></td>
+        </tr>
+        <tr>
+          <td><button type="button" class="btn btn-block btn-primary" id="lah-menu-game-a3">India</button></td>
+          <td><button type="button" class="btn btn-block btn-primary" id="lah-menu-game-a4">Canada</button></td>
+        </tr>
+      </table>
+    </div>
+​
+    <div class="align-items-center d-flex flex-row" id="lah-menu-buttons">
+      <button type="button" class="btn btn-block btn-primary m-2" id="lah-menu-start-button">START GAME</button>
+      <br>
+      <button type="button" class="btn btn-block btn-primary" data-toggle="modal" data-target="#simpleModal" id="lah-menu-intructions-button">INSTRUCTIONS</button>
+​
+      <div id="simpleModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h2 class="modal-title">Instructions</h2>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+              <p>You are the last one to survive a deadly bilogical virus that
+                broke out throughout the space station. You just escape in a
+                cryodenic pod and are launched to the surface of the Earth,
+                heading for a crash landing.</p>
+              <p>After an unknown amount of time,
+                you wake up and try to find a way to connect with the rest of
+                humanity. You can recollect some of the memories that you had
+                on the Space Station but they are fuzzy. Your team was in charge
+                of taking satellite images of Earth and learning about temperatures
+                rises due to global warming for the past 10 years, however the Earth
+                seems different than what you remember.</p>
+              <p>Upon rummaging through the
+                remains of your crash site you find a tablet and start to dicepher the
+                data, in hopes to retrigger your memories and help you find your way
+                back to civilization</p>
+              <p>You will be playing a game trivia to reboot your memory!</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
+​
 {% endblock content %}
-
+​
 {% block scripts %}
+<!-- <style type="text/javascript">
+  alert('PLAYER IS STARTING THE GAME!')
+</style> -->
 <script type='text/javascript' src={{ url_for('static', filename='js/main.js') }}></script>
 {% endblock scripts %}

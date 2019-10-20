@@ -5,3 +5,41 @@
     padding: 0;
     width: 100vw;
 }
+​
+#lah-menu-panel {
+  margin: 1em;
+}
+​
+div>table {
+ border: solid 3px black;
+ width: 600px;
+ height: auto;
+ padding: 0.5em;
+}
+​
+tr {
+  text-align: center;
+  padding: 0.5em;
+}
+​
+canvas {
+  border:3px solid black;
+}
+​
+#lah-menu-lives>p {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+​
+th>p {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+​
+td {
+  padding: 0.5em;
+}
+​
+#lah-menu-buttons {
+  margin : 1em;
+}
