@@ -21,6 +21,15 @@ CSV_DATA_HEADERS = {
 
 CSV_FILENAME_MAP = {
     'california.csv': 'California (US)',
+    'finland.csv': 'Finland',
+    'florida_us.csv': 'Florida (US)',
+    'france.csv': 'France',
     'illinois_us.csv': 'Illinois (US)',
-    'saudi_arabia.csv': 'Saudi Arabia'
+    'massachusetts_us.csv': 'Massachusetts (US)',
+    'ohio_us.csv': 'Ohio (US)',
+    'oregon_us.csv': 'Oregon (US)',
+    'saudi_arabia.csv': 'Saudi Arabia',
+    'spain.csv': 'Saudi Arabia',
+    'texas_us.csv': 'Texas (US)',
+    'virginia_us.csv': 'Virginia (US)'
 }
