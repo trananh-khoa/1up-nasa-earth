@@ -10,6 +10,8 @@ pylint = "*"
 flask = "*"
 matplotlib = "*"
 pandas = "*"
+seaborn = "*"
+ipython = "*"
 
 [requires]
 python_version = "3.7"
