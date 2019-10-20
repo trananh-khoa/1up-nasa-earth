@@ -69,7 +69,8 @@ function startGame() {
 
 function getMinigameData() {
     return $.getJSON('/minigame', function(result) {
-        minigameData = $.parse(result)
+        console.log(result)
+        minigameData = JSON.parse(result)
         console.log(minigameData)
     })
 }
