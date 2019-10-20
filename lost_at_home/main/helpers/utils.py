@@ -44,19 +44,19 @@ def convert_csv_to_dataframe(filename, filters=None, sortBy=None):
         return df
 
     df = pd.read_csv(os.path.join(DATASETS_PATH, filename))
-    
+
     if (filters):
         if (not set(filters).issubset(list(df))):
             logging.error(f"{filters} headers not found in CSV!")
         else:
             df = df[filters].copy()
-    
+
     if (sortBy):
         if (not set(filters).issubset(list(df))):
             logging.error(f"{sortBy} headers not found in CSV!")
         else:
             df = df.sort_values(sortBy['column'], ascending=sortBy['ascending'], inplace=False)
-    
+
     df['Location'] = CSV_FILENAME_MAP[filename]
 
     return df.reset_index(drop=True)
@@ -64,15 +64,9 @@ def convert_csv_to_dataframe(filename, filters=None, sortBy=None):
 def generate_minigame_choices(filename, exclude):
     answer = CSV_FILENAME_MAP[filename]
     choices = [CSV_FILENAME_MAP[x] for x in os.listdir(DATASETS_PATH) if x not in exclude]
-<<<<<<< HEAD
     choices = random.sample(choices, k = 3)
     choices = choices.append(answer)
     return choices
-=======
-    choices2 = random.sample(choices, k = 3)
-    choices2.append(answer)
-    return choices2
->>>>>>> cb86f0d5972a4dedb32db15eff3303899ad50a2e
 
 def generate_plot_figure(dataframes, filename):
     """
@@ -84,7 +78,7 @@ def generate_plot_figure(dataframes, filename):
     """
     datasets = [dataframes[x] for x in dataframes]
     df = reduce(lambda left, right: pd.merge(left, right, on=[CSV_DATA_HEADERS['measuredAt'], CSV_DATA_HEADERS['maximumTemp'], 'Location' ], how='outer'), datasets)
- 
+
     register_matplotlib_converters()
     df[CSV_DATA_HEADERS['measuredAt']] = pd.to_datetime(df[CSV_DATA_HEADERS['measuredAt']])
     df['Location'].replace([CSV_FILENAME_MAP[filename]], 'Unknown', inplace=True)
