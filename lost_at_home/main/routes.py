@@ -43,8 +43,15 @@ def api_minigame():
     logging.info(f"Generated dataframes")
 
     # Generate plot image and save to tmp folder
+    TMP_FILE_PATH = os.path.join(TMP_PATH, 'img.png')
+
+    if os.path.exists(TMP_FILE_PATH):
+        os.remove(TMP_FILE_PATH)
+    else:
+        logger.info(f"{TMP_FILE_PATH} does not exist!")
+
     figure = generate_plot_figure(dataframes, filename)
-    figure.savefig(os.path.join(TMP_PATH, 'img.png'))
+    figure.savefig(TMP_FILE_PATH)
 
     # Create object to pass to template
     return json.dumps(create_minigame_info(filename, datasets))
