@@ -7,14 +7,20 @@
 }
 
 #lah-minigame-container {
-  /* background-color: #37474f; */
   width: 100%;
 }
 
 #lah-minigame-bar {
   padding: 5px;
+  border: solid 3px red;
 }
 
 #lah-menu-reset-button {
   margin-left: 2em;
+}
+
+hr {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid white;
 }

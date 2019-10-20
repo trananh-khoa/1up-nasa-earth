@@ -21,8 +21,8 @@ def home():
     logging.info('Rendering template: main.html')
     return render_template('main.html')
 
-@main.route('/api/minigame', methods=['GET'])
-def api_minigame():
+@main.route('/minigame', methods=['GET'])
+def minigame():
     """Returns a minigame"""
     logging.info('Entering route: API_MINIGAME')
 
@@ -48,7 +48,7 @@ def api_minigame():
     if os.path.exists(TMP_FILE_PATH):
         os.remove(TMP_FILE_PATH)
     else:
-        logger.info(f"{TMP_FILE_PATH} does not exist!")
+        logging.info(f"{TMP_FILE_PATH} does not exist!")
 
     figure = generate_plot_figure(dataframes, filename)
     figure.savefig(TMP_FILE_PATH)

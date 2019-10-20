@@ -64,7 +64,8 @@ def convert_csv_to_dataframe(filename, filters=None, sortBy=None):
 def generate_minigame_choices(filename, exclude):
     answer = CSV_FILENAME_MAP[filename]
     choices = [CSV_FILENAME_MAP[x] for x in os.listdir(DATASETS_PATH) if x not in exclude]
-    return [random.sample(choices, k=3).append(answer)]
+    choices.append(answer)
+    return choices
 
 def generate_plot_figure(dataframes, filename):
     """
@@ -79,7 +80,7 @@ def generate_plot_figure(dataframes, filename):
  
     register_matplotlib_converters()
     df[CSV_DATA_HEADERS['measuredAt']] = pd.to_datetime(df[CSV_DATA_HEADERS['measuredAt']])
-    df['Location'].replace([filename], 'Unknown')
+    df['Location'].replace([CSV_FILENAME_MAP[filename]], 'Unknown', inplace=True)
 
     sns.set()
 
