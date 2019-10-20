@@ -5,12 +5,43 @@
 {% endblock head %}
 
 {% block content %}
-<div class="align-items-center container-fluid d-flex flex-column justify-content-center " id="lah-menu">
-    <div id="lah-menu-content">
-        <h1 class="display-1" id="lah-menu-title">LOST AT HOME</h1>
-        <br>
-        <button type="button" class="btn btn-block btn-primary" id="lah-menu-start-button">START</button>
+<div class="align-items-center container-fluid d-flex flex-column justify-content-center " id="lah-container">
+  <!-- Title -->
+  <h1 class="display-1" id="lah-title">LOST AT HOME</h1>
+
+  <div class="container-fluid">
+    <div class="align-items-center d-flex" id="lah-minigame-bar">
+      <div id="lah-minigame-lives">
+        <span>LIVES: 
+          <i class="fas fa-heart"></i>
+          <i class="far fa-heart"></i>
+          <i class="far fa-heart"></i>
+        </span>
+      </div>
+      <button type="button" class="btn btn-outline-dark" id="lah-menu-reset-button">
+        <i class="fas fa-sync-alt"></i>
+      </button>
+      <!-- progress bar -->
     </div>
+  </div>
+
+  <div class="container-fluid">
+    <div class="card text-white bg-dark" id="lah-minigame-container">
+      <img class="card-img-top" id="lah-minigame-img">
+      <div class="card-body">
+        <h5 class="card-title" id="lah-minigame-question">QUESTION #
+          <span id="lah-minigame-round"></span>: <span id="lah-minigame-question-text"></span>
+        </h5>
+        <!-- four choices buttons -->
+
+        <div id="lah-minigame-controls">
+          <button type="button" class="btn btn-block btn-primary" id="lah-menu-start-button">START</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
 </div>
 {% endblock content %}
 

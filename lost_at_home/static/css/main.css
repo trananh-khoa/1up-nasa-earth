@@ -1,7 +1,20 @@
-#lah-menu {
+#lah-container {
     background-color: mediumturquoise;
     height: 100vh;
     margin: 0;
     padding: 0;
     width: 100vw;
+}
+
+#lah-minigame-container {
+  /* background-color: #37474f; */
+  width: 100%;
+}
+
+#lah-minigame-bar {
+  padding: 5px;
+}
+
+#lah-menu-reset-button {
+  margin-left: 2em;
 }
