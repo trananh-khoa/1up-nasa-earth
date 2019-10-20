@@ -17,15 +17,19 @@
     <div class="align-items-center d-flex" id="lah-minigame-bar">
       <div id="lah-minigame-lives">
         <span>LIVES:
-          <i class="fas fa-heart"></i>
-          <i class="far fa-heart"></i>
-          <i class="far fa-heart"></i>
+          <i class="fas fa-heart" id="lah-lives-1"></i>
+          <i class="fas fa-heart" id="lah-lives-2"></i>
+          <i class="fas fa-heart" id="lah-lives-3"></i>
         </span>
       </div>
       <button type="button" class="btn btn-outline-dark" id="lah-menu-reset-button">
         <i class="fas fa-sync-alt"></i>
       </button>
-      <div class="progress-bar bg-info" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" id="lah-progress"><span id="lah-progress-value"></span>%</div>
+      <div class="progress" style="width: 80%" id="lah-progress-container">
+        <div class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="60" id="lah-progress-bar">
+          <span id="lah-progress-bar-value"></span>%
+        </div>
+      </div>
     </div>
   </div>
 
@@ -39,12 +43,12 @@
 
         <div class="align-items-center d-flex flex-row" id="lah-minigame-options">
           <div class="col">
-            <button type="button" class="btn btn-block btn-success m-2" id="lah-options">OPTION A: <span id="lah-optionA"></span></button>
-            <button type="button" class="btn btn-block btn-success m-2" id="lah-options">OPTION B: <span id="lah-optionB"></span></button>
+            <button type="button" class="btn btn-block btn-success m-2">OPTION A: <span id="lah-optionA"></span></button>
+            <button type="button" class="btn btn-block btn-success m-2">OPTION B: <span id="lah-optionB"></span></button>
           </div>
           <div class="col">
-            <button type="button" class="btn btn-block btn-success m-2" id="lah-options">OPTION C: <span id="lah-optionC"></span></button>
-            <button type="button" class="btn btn-block btn-success m-2" id="lah-options">OPTION D: <span id="lah-optionD"></span></button>
+            <button type="button" class="btn btn-block btn-success m-2">OPTION C: <span id="lah-optionC"></span></button>
+            <button type="button" class="btn btn-block btn-success m-2">OPTION D: <span id="lah-optionD"></span></button>
           </div>
         </div>
 
