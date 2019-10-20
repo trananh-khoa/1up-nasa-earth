@@ -11,11 +11,17 @@
 }
 
 #lah-minigame-bar {
-  padding: 5px;
-  border: solid 3px red;
+  padding: 10px ;
+  border: solid 3px black;
+  border-radius: 5px;
+  margin: 5px 0;
 }
 
 #lah-menu-reset-button {
+  margin-left: 2em;
+}
+
+#lah-progress-container {
   margin-left: 2em;
 }
 
