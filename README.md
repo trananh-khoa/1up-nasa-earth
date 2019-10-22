@@ -1,5 +1,8 @@
 # SPACE APPS: 1UP NASA EARTH CHALLENGE
 
+## Project Status
+Due to unfortunate circumstances, this project was not completed to a satisfactory degree for the SPACE APPS HACKATHON 2019. This repository has been archived.
+
 ## Getting Started
 - Download python 3.7.4 (via pyenv or otherwise)
 
